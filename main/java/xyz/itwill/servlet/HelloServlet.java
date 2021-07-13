@@ -3,10 +3,10 @@ package xyz.itwill.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 //서블릿(웹에서 실행되는 프로그램) 작성 방법
 //1.HttpServlet 클래스를 상속받아 작성 - 서블릿 클래스
@@ -28,13 +28,13 @@ public class HelloServlet extends HttpServlet {
 		//HttpServletRequest : 리퀘스트 메세지(요청정보)가 저장된 인스턴스
 		//HttpServletResponse : 리스폰즈 메세지(응답정보)가 저장된 인스턴스
 		
-		//3.클라이언트에게 응답할 문서(파일)의 형식(Mime Type) 변경
+		//3.클라이언트에게 응답할 문서(파일)의 형식(Mime Type) 설정(변경)
 		// => 문서 형식으로 응답할 경우 문서의 캐릭터셋(CharacterSet : 문자형식 - 인코딩) 설정
 		// => 기본 응답 문서 형식 : text/html, 캐릭터셋 : ISO-8859-1(서유럽어)
 		//HttpServletResponse.setContentType(String mimeType[;charset=encoding])
 		response.setContentType("text/html;charset=utf-8");
 		
-		//4.클라이언트에게 요청에 대한 처리 결과를 전달(응답)하기 위한 출력 스트림을 반환받아 저장
+		//4.클라이언트에게 요청에 대한 처리 결과를 생성(응답)하기 위한 출력 스트림을 반환받아 저장
 		//형식)HttpServletResponse.getOutputStream() : 원시 데이타(1Byte)를 전달할 수 있는
 		//출력 스트림(ServletOutputStream 인스턴스)을 반환하는 메소드
 		// => 그림,음향,영상 파일등을 클라이언트에게 전달하기 위해 사용하는 출력 스트림 
@@ -63,3 +63,4 @@ public class HelloServlet extends HttpServlet {
 		// => 매핑된 URL 주소로 클라이언트가 요청하면 WAS는 등록된 서블릿을 실행하여 응답
 	}
 }
+
