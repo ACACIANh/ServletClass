@@ -62,7 +62,6 @@ public class NoticeServlet extends HttpServlet {
 			in.close();
 		} catch (FileNotFoundException e) {
 			out.println("<p>오늘은 공지사항이 없습니다.</p>");
-			
 		}
 		
 		out.println("<br>");

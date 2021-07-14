@@ -36,7 +36,7 @@ public class JoinServlet extends HttpServlet {
 			//HttpServletResponse.sendRedirect(String url) : 클라이언트에게 301 상태코드와
 			//URL 주소를 전달하는 메소드
 			// => 301 : 전달받은 URL 주소의 웹프로그램을 요청하기 위한 상태코드
-			// => 클라이언트 브라우저의 URL 주소를 변경하고 요청한 웹프로그램의 응답 결과 출력 - 페이지 이동
+			// => 클라이언트는 브라우저의 URL 주소를 변경하고 요청한 웹프로그램의 응답 결과 출력 - 페이지 이동
 			// => 서블릿을 이용한 페이지 이동 방법 - 리다이렉트 이동
 			response.sendRedirect("error.html");
 			return;
